@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import ReactDOM from 'react-dom/client';
+import type { Interaction } from 'scheduler/tracing';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,7 +10,22 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Profiler
+      id={'App'}
+      onRender={function (
+        id: string,
+        phase: 'mount' | 'update',
+        actualDuration: number,
+        baseDuration: number,
+        startTime: number,
+        commitTime: number,
+        interactions: Set<Interaction>
+      ): void {
+        console.log({ phase, actualDuration });
+      }}
+    >
+      <App />
+    </Profiler>
   </React.StrictMode>
 );
 
