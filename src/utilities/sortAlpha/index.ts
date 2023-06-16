@@ -1,0 +1,1 @@
+export { sortAlpha } from './sortAlpha';

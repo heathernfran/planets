@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { getData } from '../../api';
 import { Loading } from '../Loading';
+import { sortAlpha } from '../../utilities';
 
 interface Planet {
   name: string;
@@ -21,7 +22,8 @@ export function Table() {
       const { results }: { results: Planet[] } = await getData(
         'https://swapi.dev/api/planets/'
       );
-      setData(results);
+      const sortedResults = sortAlpha(results);
+      setData(sortedResults);
     } catch (err) {
       setError(err as Error);
     }
