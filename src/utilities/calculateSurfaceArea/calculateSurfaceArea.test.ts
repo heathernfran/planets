@@ -9,8 +9,8 @@ describe('calculateSurfaceArea()', () => {
   });
 });
 
-describe('calculcatecalculateSurfaceAreaSizePercentage()', () => {
-  it('calculates the percentage of a surface area', () => {
+describe('calculateSurfaceAreaSize()', () => {
+  it('calculates the size of a surface area, based on a given percentage', () => {
     expect(calculateSurfaceAreaSize('10465', '1')).toBe(658);
   });
 });

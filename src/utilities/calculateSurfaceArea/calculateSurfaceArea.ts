@@ -10,8 +10,8 @@ export function calculateSurfaceAreaSize(
   diameter: string,
   percentageSurfaceArea: string
 ) {
-  const parsedDiameter = parseInt(diameter);
-  const parsedPercentageSurfaceArea = parseInt(percentageSurfaceArea);
+  const parsedDiameter = parseFloat(diameter);
+  const parsedPercentageSurfaceArea = parseFloat(percentageSurfaceArea);
   if (!Number.isInteger(parsedDiameter)) {
     return checkUnknown(diameter);
   }
