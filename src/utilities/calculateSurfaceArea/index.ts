@@ -1,4 +1,4 @@
 export {
   calculateSurfaceArea,
-  calculatePercentage,
+  calculateSurfaceAreaSize,
 } from './calculateSurfaceArea';

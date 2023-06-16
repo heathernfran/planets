@@ -13,6 +13,7 @@ const mockResults = [
     terrain: 'Terrain 1',
     population: '100',
     surface_water: '50',
+    diameter: '500',
     url: 'https://example.com/planet1',
   },
   {
@@ -22,6 +23,7 @@ const mockResults = [
     terrain: 'Terrain 2',
     population: '200',
     surface_water: '0',
+    diameter: '1000',
     url: 'https://example.com/planet2',
   },
 ];

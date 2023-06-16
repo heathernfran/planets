@@ -1,7 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { getData } from '../../api';
 import { Loading } from '../Loading';
-import { sortAlpha } from '../../utilities';
+import {
+  calculateSurfaceAreaSize,
+  formatLargeNumber,
+  sortAlpha,
+} from '../../utilities';
 
 interface Planet {
   name: string;
@@ -11,6 +15,7 @@ interface Planet {
   population: string;
   surface_water: string;
   url: string;
+  diameter: string;
 }
 
 export function Table() {
@@ -60,8 +65,10 @@ export function Table() {
             <td>{value.climate}</td>
             <td>{value.residents.length}</td>
             <td>{value.terrain}</td>
-            <td>{value.population}</td>
-            <td>{value.surface_water}</td>
+            <td>{formatLargeNumber(value.population)}</td>
+            <td>
+              {calculateSurfaceAreaSize(value.diameter, value.surface_water)}
+            </td>
           </tr>
         ))}
       </tbody>

@@ -1,6 +1,6 @@
 import {
   calculateSurfaceArea,
-  calculatePercentage,
+  calculateSurfaceAreaSize,
 } from './calculateSurfaceArea';
 
 describe('calculateSurfaceArea()', () => {
@@ -9,8 +9,8 @@ describe('calculateSurfaceArea()', () => {
   });
 });
 
-describe('calculcatePercentage()', () => {
+describe('calculcatecalculateSurfaceAreaSizePercentage()', () => {
   it('calculates the percentage of a surface area', () => {
-    expect(calculatePercentage('10465', '1')).toBe(657.54);
+    expect(calculateSurfaceAreaSize('10465', '1')).toBe(658);
   });
 });

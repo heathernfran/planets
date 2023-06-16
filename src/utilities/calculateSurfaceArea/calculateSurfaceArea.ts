@@ -6,7 +6,7 @@ export function calculateSurfaceArea(diameter: number) {
   return Math.round(surfaceArea);
 }
 
-export function calculatePercentage(
+export function calculateSurfaceAreaSize(
   diameter: string,
   percentageSurfaceArea: string
 ) {
@@ -21,5 +21,5 @@ export function calculatePercentage(
 
   const totalSurfaceArea = calculateSurfaceArea(parsedDiameter);
   const calculation = (parsedPercentageSurfaceArea * totalSurfaceArea) / 100;
-  return calculation;
+  return Math.round(calculation);
 }

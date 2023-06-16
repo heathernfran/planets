@@ -1,6 +1,6 @@
 export {
   calculateSurfaceArea,
-  calculatePercentage,
+  calculateSurfaceAreaSize,
 } from './calculateSurfaceArea';
 export { checkUnknown } from './checkUnknown';
 export { formatLargeNumber } from './formatLargeNumber';
