@@ -8,14 +8,14 @@ import {
 } from '../../utilities';
 
 interface Planet {
-  name: string;
   climate: string;
-  residents: string[];
-  terrain: string;
-  population: string;
-  surface_water: string;
-  url: string;
   diameter: string;
+  name: string;
+  population: string;
+  residents: string[];
+  surface_water: string;
+  terrain: string;
+  url: string;
 }
 
 export function Table() {
@@ -55,22 +55,34 @@ export function Table() {
         </tr>
       </thead>
       <tbody>
-        {data.map((value, index) => (
-          <tr key={index}>
-            <td>
-              <a href={value.url} rel="noreferrer" target="_blank">
-                {value.name}
-              </a>
-            </td>
-            <td>{value.climate}</td>
-            <td>{value.residents.length}</td>
-            <td>{value.terrain}</td>
-            <td>{formatLargeNumber(value.population)}</td>
-            <td>
-              {calculateSurfaceAreaSize(value.diameter, value.surface_water)}
-            </td>
-          </tr>
-        ))}
+        {data.map(
+          (
+            {
+              climate,
+              diameter,
+              name,
+              population,
+              residents,
+              surface_water,
+              terrain,
+              url,
+            },
+            index
+          ) => (
+            <tr key={`${name}-${index}`}>
+              <td>
+                <a href={url} rel="noreferrer" target="_blank">
+                  {name}
+                </a>
+              </td>
+              <td>{climate}</td>
+              <td>{residents.length}</td>
+              <td>{terrain}</td>
+              <td>{formatLargeNumber(population)}</td>
+              <td>{calculateSurfaceAreaSize(diameter, surface_water)}</td>
+            </tr>
+          )
+        )}
       </tbody>
     </table>
   );
