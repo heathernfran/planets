@@ -6,19 +6,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Clone the repo
 
-`git clone https://github.com/heathernfran/planets.git`
+```
+git clone https://github.com/heathernfran/planets.git
+```
 
 ### Navigate into the `planets` folder
 
-`cd planets`
+```
+cd planets
+```
 
 ### Install dependencies
 
-`npm install`
+```
+npm install
+```
 
 ### Start dev server
 
-`npm start`
+```
+npm start
+```
 
 ## Available Scripts
 
