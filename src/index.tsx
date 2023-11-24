@@ -13,6 +13,7 @@ root.render(
     <Profiler
       id={'App'}
       onRender={function (
+        /* eslint-disable @typescript-eslint/no-unused-vars */
         id: string,
         phase: 'mount' | 'update',
         actualDuration: number,
@@ -20,6 +21,7 @@ root.render(
         startTime: number,
         commitTime: number,
         interactions: Set<Interaction>
+        /* eslint-enable @typescript-eslint/no-unused-vars */
       ): void {
         console.log({ phase, actualDuration });
       }}
