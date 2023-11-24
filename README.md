@@ -27,3 +27,9 @@ npm install
 ```
 npm start
 ```
+
+### Run tests
+
+```
+npm run tests
+```
